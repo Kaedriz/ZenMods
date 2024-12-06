@@ -1,0 +1,26 @@
+/* Disable Tab scaling animation on click */
+/* @media (-moz-bool-pref: "zen.tabs.vertical") {
+  .tabbrowser-tab:active,
+  .zen-sidebar-panel-button:active {
+    transform: scale(1) !important;
+  }
+} */
+
+/* Enable animation of background color on tab hover */
+/* @media (-moz-bool-pref: "zen.tabs.vertical") {
+  .tabbrowser-tab {
+    transition: background 100ms !important;
+  }
+} */
+
+/* Add transparency to tab panel (website view) */
+/* :root { --tabpanel-background-color: #00000000 !important; } */
+
+/* Reordering of context menu items */
+@import url(ContextMenuOverhaul/ContextMenuOverhaul.css);
+
+/* Redesign of extension menu */
+@import url(src/extensions-menu.css);
+
+/* Redesign of audio indicator on tab */
+@import url(AudioIndicatorEnhanced/AudioIndicatorEnhanced.css);

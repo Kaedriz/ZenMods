@@ -1,0 +1,32 @@
+[
+    {
+        "property": "zen.ContextMenuOverhaul.defaultContextMenuEnabled",
+        "label": "Enabled - Default Context Menu Overhaul",
+        "type": "checkbox",
+        "defaultValue": false
+    },
+    {
+        "property": "zen.ContextMenuOverhaul.defaultContextMenu.navigation.order",
+        "label": "Enabled - Navigation Elements",
+        "type": "string",
+        "defaultValue": "10"
+    },
+    {
+        "property": "zen.ContextMenuOverhaul.defaultContextMenu.savepage.order",
+        "label": "Enabled - Save Page As...",
+        "type": "string",
+        "defaultValue": "20"
+    },
+    {
+        "property": "zen.ContextMenuOverhaul.defaultContextMenu.sendpagetodevice.order",
+        "label": "Enabled - Send Page to Device",
+        "type": "string",
+        "defaultValue": "30"
+    },
+    {
+        "property": "zen.ContextMenuOverhaul.defaultContextMenu.selectall.order",
+        "label": "Enabled - Select All",
+        "type": "string",
+        "defaultValue": "40"
+    }
+]
