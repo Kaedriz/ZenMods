@@ -1,5 +1,6 @@
 #statuspanel-label {
 	border-radius: 0.5em !important;
+	border-style: solid !important;
 	margin: 0.25em !important;
 	background: var(--zen-main-browser-background) !important;
 }
