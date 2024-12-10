@@ -24,3 +24,6 @@
 
 /* Redesign of audio indicator on tab */
 @import url(AudioIndicatorEnhanced/AudioIndicatorEnhanced.css);
+
+/* Redesign of tab preview panel */
+@import url(TabPreviewEnhanced/TabPreviewEnhanced.css);
