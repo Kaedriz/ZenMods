@@ -17,7 +17,7 @@
 /* :root { --tabpanel-background-color: #00000000 !important; } */
 
 /* Reordering of context menu items */
-@import url(ContextMenuOverhaul/ContextMenuOverhaul.css);
+@import url(ContextMenuEnhanced/ContextMenuEnhanced.css);
 
 /* Redesign of extension menu */
 @import url(ExtensionMenuEnhanced/ExtensionMenuEnhanced.css);
