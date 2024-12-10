@@ -1,9 +1,9 @@
 #tab-preview-panel {
     /* Removes default background color of panel, below tab title */
-	--panel-background: none;
+	--panel-background: none !important;
 
     /* Removes shadow in the margin area (dunno if actually does something, or it's just my imagination) */
-    --panel-shadow-margin: none;
+    --panel-shadow-margin: none !important;
 
     /* Removes border between tab title & tab preview image */
     --arrowpanel-border-color: transparent;
@@ -16,7 +16,7 @@
 
     /* Shifts panel to the slightly right */
     /* TODO: Make customizable */
-	margin-left: 0.5em;
+	margin-left: 0.5em !important;
 
     /* Created a border area around tab preview */
     /* TODO: Make optional */
