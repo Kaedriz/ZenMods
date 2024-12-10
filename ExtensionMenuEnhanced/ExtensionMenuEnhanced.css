@@ -1,0 +1,53 @@
+/* Overhauled extensions menu, much more compact */
+
+#unified-extensions-panel {
+    max-height: 600px !important;
+  
+    panelmultiview {
+      max-width: 420px !important;
+    }
+  }
+  
+  /* Hide header, footer and separators */
+  #unified-extensions-view {
+    width: fit-content !important;
+  
+    & .panel-header,
+    toolbarseparator,
+    #unified-extensions-manage-extensions {
+      display: none !important;
+    }
+  }
+  
+  /* Hide extension settings buttons */
+  .unified-extensions-item-menu-button {
+    display: none !important;
+  }
+  
+  /* Hide text label of extension */
+  .unified-extensions-item-contents {
+    display: none !important;
+  }
+  
+  /* List of active extensions */
+  #unified-extensions-area,
+      /* List of passive extensions */
+      .unified-extensions-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: fit-content;
+    max-width: 420px;
+  
+    /* Extension button */
+    & .unified-extensions-item {
+      width: 50px;
+      height: 50px;
+  
+      margin: 5px !important;
+  
+      & > .unified-extensions-item-action-button {
+        aspect-ratio: 1 / 1;
+      }
+    }
+  }
+  

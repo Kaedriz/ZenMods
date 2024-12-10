@@ -20,7 +20,7 @@
 @import url(ContextMenuOverhaul/ContextMenuOverhaul.css);
 
 /* Redesign of extension menu */
-@import url(src/extensions-menu.css);
+@import url(ExtensionMenuEnhanced/ExtensionMenuEnhanced.css);
 
 /* Redesign of audio indicator on tab */
 @import url(AudioIndicatorEnhanced/AudioIndicatorEnhanced.css);
