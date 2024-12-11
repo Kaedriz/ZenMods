@@ -1,21 +1,21 @@
 #tab-preview-panel {
-    /* Removes default background color of panel, below tab title */
+	/* Removes default background color of panel, below tab title */
 	--panel-background: none !important;
 
-    /* Removes shadow in the margin area (dunno if actually does something, or it's just my imagination) */
-    --panel-shadow-margin: none !important;
+	/* Removes shadow in the margin area (dunno if actually does something, or it's just my imagination) */
+	--panel-shadow-margin: none !important;
 
-    /* Removes border between tab title & tab preview image */
-    --arrowpanel-border-color: transparent;
+	/* Removes border between tab title & tab preview image */
+	--arrowpanel-border-color: transparent;
 
-    /* Matches Zen main background color, also supports gradients */
+	/* Matches Zen main background color, also supports gradients */
 	background: var(--zen-main-browser-background);
 
-    /* Matches Zen panel radius */
+	/* Matches Zen panel radius */
 	border-radius: var(--zen-panel-radius);
 
-    /* Shifts panel to the slightly right */
-    /* TODO: Make customizable */
+	/* Shifts panel to the slightly right */
+	/* TODO: Make customizable */
 	margin-left: 0.5em !important;
 
     /* Creates a border area around tab preview */
