@@ -18,7 +18,23 @@
 	/* TODO: Make customizable */
 	margin-left: 0.5em !important;
 
-    /* Creates a border area around tab preview */
-    /* TODO: Make optional */
-    padding: var(--zen-element-separation);
+	/* Creates a border area around tab preview */
+	/* TODO: Make optional */
+	padding: var(--zen-element-separation);
+
+	/* Removes a border around tab preview */
+	&::part(content) {
+		border: none !important;
+	}
+}
+
+.tab-preview-thumbnail-container {
+	/* Fixes proper tab preview image sizing */
+	width: 280px !important;
+	height: 140px !important;
+
+	canvas {
+		/* Makes tab preview image rounded */
+		border-radius: var(--zen-panel-radius) !important;
+	}
 }
