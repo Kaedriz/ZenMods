@@ -18,7 +18,7 @@
     /* TODO: Make customizable */
 	margin-left: 0.5em !important;
 
-    /* Created a border area around tab preview */
+    /* Creates a border area around tab preview */
     /* TODO: Make optional */
     padding: var(--zen-element-separation);
 }
