@@ -14,9 +14,22 @@
 		}
 	}
 
-    /* Different background color when muted */
 	&[muted] {
+		/* Different background color when muted */
 		background-color: rgb(122, 31, 31) !important;
+
+		/* Revert old icon */
+		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg") !important;
+	}
+
+	&[soundplaying] {
+		/* Revert old icon */
+		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
+	}
+
+	&[activemedia-blocked] {
+		/* Revert old icon */
+		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
 	}
 
     /* Revert new, zen's audio indicator */
