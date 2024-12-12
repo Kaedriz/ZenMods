@@ -30,8 +30,10 @@
 
 .tab-preview-thumbnail-container {
 	/* Fixes proper tab preview image sizing */
-	width: 280px !important;
-	height: 140px !important;
+	&:has(canvas) {
+		width: 280px !important;
+		height: 140px !important;
+	}
 
 	canvas {
 		/* Makes tab preview image rounded */
