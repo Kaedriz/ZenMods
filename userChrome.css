@@ -16,6 +16,9 @@
 /* Add transparency to tab panel (website view) */
 /* :root { --tabpanel-background-color: #00000000 !important; } */
 
+/* Import for injecting temporary, prototyped code without changing userChrome */
+@import url(src/.temp.css);
+
 /* Reordering of context menu items */
 @import url(ContextMenuEnhanced/ContextMenuEnhanced.css);
 
