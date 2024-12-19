@@ -4,7 +4,7 @@
   <img src="https://github.com/Kaedriz/ZenMods/blob/main/assets/Logo.png?raw=true" />
 </p>
 
-Public repository containing my Zen CSS Mods.
+Public repository containing my Zen CSS Mods, which enhance Zen and bring it closer to coherent vision and be better to use.
 
 For now I'm focused on building first, to my taste, then expanding with options later.
 
