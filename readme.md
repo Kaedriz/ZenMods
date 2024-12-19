@@ -1,5 +1,7 @@
 # Zen Mods
 
+![](https://github.com/Kaedriz/ZenMods/blob/main/assets/Logo.png?raw=true)
+
 Public repository containing my Zen CSS Mods.
 
 For now I'm focused on building first, to my taste, then expanding with options later.
