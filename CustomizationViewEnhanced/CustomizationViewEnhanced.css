@@ -1,0 +1,38 @@
+/* Fixes missing space around top-left customizable area */
+:root:has(:not(#zen-sidebar-top-buttons-customization-target:empty))
+	#zen-sidebar-top-buttons {
+	padding: var(--zen-toolbox-padding) !important;
+	padding-right: unset !important;
+}
+
+/* Makes top-left customizable area invisible when empty (except when in customize mode) */
+:root:not([customizing]):has(#zen-sidebar-top-buttons-customization-target:empty)
+	#zen-sidebar-top-buttons {
+	height: 0px !important;
+	min-height: 0px !important;
+}
+
+/* Fixes incorrect(?) property & variable used to separate bottom customizable area */
+#zen-sidebar-icons-wrapper {
+	padding-top: 0 !important;
+	margin-top: var(--zen-toolbox-padding);
+}
+
+/* Add outline to indicate area in which elements can be placed */
+:root[customizing] .customization-target:not(#zen-sidebar-top-buttons) {
+	outline: 2px dashed;
+	outline-offset: -2px;
+
+	border-radius: 10px;
+
+	animation: color-animation 5s infinite linear alternate;
+}
+
+@keyframes color-animation {
+	from {
+		outline-color: rgb(163, 163, 39);
+	}
+	to {
+		outline-color: rgb(22, 21, 21);
+	}
+}

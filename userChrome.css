@@ -30,3 +30,6 @@
 
 /* Redesign of tab preview panel */
 @import url(TabPreviewEnhanced/TabPreviewEnhanced.css);
+
+/* Fixes to customization view */
+@import url(CustomizationViewEnhanced/CustomizationViewEnhanced.css);
