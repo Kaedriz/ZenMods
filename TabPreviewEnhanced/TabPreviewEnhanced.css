@@ -9,7 +9,7 @@
 	--arrowpanel-border-color: transparent;
 
 	/* Matches Zen main background color, also supports gradients */
-	background: var(--zen-main-browser-background);
+	background: var(--zen-main-browser-background) !important;
 
 	/* Matches Zen panel radius */
 	border-radius: var(--zen-panel-radius);
