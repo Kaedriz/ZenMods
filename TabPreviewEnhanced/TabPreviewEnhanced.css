@@ -17,22 +17,24 @@
 	/* Shifts panel to the slightly right */
 	/* TODO: Make customizable */
 	margin-left: 0.5em !important;
-
-	/* Creates a border area around tab preview */
-	/* TODO: Make optional */
-	padding: var(--zen-element-separation);
-
-	/* Removes a border around tab preview */
-	&::part(content) {
-		border: none !important;
-	}
 }
 
 .tab-preview-thumbnail-container {
 	/* Fixes proper tab preview image sizing */
 	&:has(canvas) {
-		width: 280px !important;
-		height: 140px !important;
+		/* TODO: Make optional */
+		padding: var(--zen-element-separation);
+
+		/* Hide border above preview */
+		border-top: none !important;
+
+		/* Shrink preview to match added padding */
+		/* TODO: Make optional with padding as well */
+		width: calc(var(--panel-width) - (var(--zen-element-separation) * 2)) px !important;
+		height: unset !important;
+
+		/* Some safety code to maintain aspect ratio */
+		aspect-ratio: 2 / 1 !important;
 	}
 
 	canvas {
