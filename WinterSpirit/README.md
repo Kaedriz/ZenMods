@@ -11,4 +11,4 @@ Works as of `1.0.2-b.3`
 
 ### Credits
 
-Code for snowflakes taken from [here](https://codepen.io/jasonhibbs/pen/DmvgeP?editors=0100), and customized for Zen.
+Code for snowflakes taken from [here](https://codepen.io/jasonhibbs/pen/DmvgeP?editors=0100), created by *Jason Hibbs*.
