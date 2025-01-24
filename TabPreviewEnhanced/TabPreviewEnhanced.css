@@ -12,7 +12,7 @@
 	background: var(--zen-main-browser-background) !important;
 
 	/* Matches Zen panel radius */
-	border-radius: var(--zen-panel-radius);
+	border-radius: var(--panel-border-radius);
 
 	/* Shifts panel to the slightly right */
 	/* TODO: Make customizable */
@@ -39,6 +39,6 @@
 
 	canvas {
 		/* Makes tab preview image rounded */
-		border-radius: var(--zen-panel-radius) !important;
+		border-radius: var(--panel-border-radius) !important;
 	}
 }
