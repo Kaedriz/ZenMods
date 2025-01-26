@@ -1,18 +1,22 @@
 #tab-preview-panel {
-	/* Removes default background color of panel, below tab title */
-	--panel-background: none !important;
-
-	/* Removes shadow in the margin area (dunno if actually does something, or it's just my imagination) */
-	--panel-shadow-margin: none !important;
-
-	/* Removes border between tab title & tab preview image */
-	--arrowpanel-border-color: transparent;
-
-	/* Matches Zen main background color, also supports gradients */
-	background: var(--zen-main-browser-background) !important;
+	@media (-moz-bool-pref: 'zen.mods.TabPreviewEnhanced.enabledBackgroundNative') {
+		/* Matches Zen main background color, also supports gradients */
+		--panel-background: var(--zen-main-browser-background) !important;
+	}
 
 	/* Matches Zen panel radius */
-	border-radius: var(--panel-border-radius);
+	/* @media not (-moz-bool-pref: 'zen.mods.TabPreviewEnhanced.enabledCustomBorderRadius') {
+		border-radius: var(--panel-border-radius) !important;	
+	} */
+
+	/* Custom border radius for tab preview*/
+	@media (-moz-bool-pref: 'zen.mods.TabPreviewEnhanced.enabledCustomBorderRadius') {
+		/* border-radius: var(--zen-mods-TabPreviewEnhanced-borderRadiusAmount) !important; */
+		--panel-border-radius: var(--zen-mods-TabPreviewEnhanced-borderRadiusAmount) !important;
+	}
+
+	/* Removes border around tab preview */
+	--zen-appcontent-border: transparent !important;
 
 	/* Shifts panel to the slightly right */
 	/* TODO: Make customizable */
@@ -22,11 +26,16 @@
 .tab-preview-thumbnail-container {
 	/* Fixes proper tab preview image sizing */
 	&:has(canvas) {
-		/* TODO: Make optional */
-		padding: var(--zen-element-separation);
+		@media (-moz-bool-pref: 'zen.mods.TabPreviewEnhanced.enabledMargins') {
+			/* Add padding around tab preview image */
+			padding: var(--zen-element-separation);
+		}
 
 		/* Hide border above preview */
 		border-top: none !important;
+
+		/* Hides padding between tab preview image and tab preview title */
+		padding-top: 0 !important;
 
 		/* Shrink preview to match added padding */
 		/* TODO: Make optional with padding as well */
@@ -38,7 +47,15 @@
 	}
 
 	canvas {
-		/* Makes tab preview image rounded */
-		border-radius: var(--panel-border-radius) !important;
+		/* Matches Zen panel radius */
+		@media not (-moz-bool-pref: 'zen.mods.TabPreviewEnhanced.enabledCustomBorderRadius') {
+			border-radius: calc(var(--panel-border-radius) / 1.3) !important;
+		}
+
+		/* Custom border radius for tab preview image */
+		@media (-moz-bool-pref: 'zen.mods.TabPreviewEnhanced.enabledCustomBorderRadius') {
+			/* border-radius: calc(var(--zen-mods-TabPreviewEnhanced-borderRadiusAmount) / 1.3) !important; */
+			border-radius: calc(var(--zen-mods-TabPreviewEnhanced-borderRadiusAmount) / 1.3) !important;
+		}
 	}
 }
