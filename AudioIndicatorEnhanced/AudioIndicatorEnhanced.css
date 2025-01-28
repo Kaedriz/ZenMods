@@ -29,12 +29,21 @@
 
 	&[activemedia-blocked] {
 		/* Revert old icon */
+		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
+			background-image: url('chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg') !important;
+		}
 		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
+		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
+			background-image: url('chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg') !important;
+		}
 	}
 
-    /* Revert new, zen's audio indicator */
-	&[muted],
-	&[soundplaying] {
-		list-style-image: none !important;
+	/* Revert new, zen's audio indicator */
+	@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
+		&[muted],
+		&[soundplaying] {
+			list-style-image: none !important;
+		}
 	}
+}
 }

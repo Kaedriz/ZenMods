@@ -1,0 +1,14 @@
+[
+    {
+        "property": "zen.mods.AudioIndicatorEnhanced.hoverScaleAnimationEnabled",
+        "label": "Increases indicator size on hover",
+        "type": "checkbox",
+        "defaultValue": true
+    },
+    {
+        "property": "zen.mods.AudioIndicatorEnhanced.returnOldIcons",
+        "label": "Bring back default Firefox icons",
+        "type": "checkbox",
+        "defaultValue": true
+    }
+]
