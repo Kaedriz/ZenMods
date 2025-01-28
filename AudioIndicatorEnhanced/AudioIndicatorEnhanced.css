@@ -6,11 +6,13 @@
 		border: 1px solid #ffffff29 !important;
 		transition: transform 100ms ease-in-out, background-color 100ms ease-in-out;
 
-		&:hover {
-			transition: transform 100ms ease-in-out,
-				background-color 100ms ease-in-out !important;
-			transform: scale(1.3) translate(-8%, 14%);
-			transform-origin: center !important;
+		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.hoverScaleAnimationEnabled') {
+			&:hover {
+				transition: transform 100ms ease-in-out,
+					background-color 100ms ease-in-out !important;
+				transform: scale(1.3) translate(-8%, 14%);
+				transform-origin: center !important;
+			}
 		}
 	}
 
@@ -19,20 +21,20 @@
 		background-color: rgb(122, 31, 31) !important;
 
 		/* Revert old icon */
-		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg") !important;
+		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
+			background-image: url('chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg') !important;
+		}
 	}
 
 	&[soundplaying] {
 		/* Revert old icon */
-		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg") !important;
+		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
+			background-image: url('chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg') !important;
+		}
 	}
 
 	&[activemedia-blocked] {
 		/* Revert old icon */
-		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
-			background-image: url('chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg') !important;
-		}
-		background-image: url("chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg") !important;
 		@media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.returnOldIcons') {
 			background-image: url('chrome://browser/skin/tabbrowser/tab-audio-blocked-small.svg') !important;
 		}
@@ -45,5 +47,4 @@
 			list-style-image: none !important;
 		}
 	}
-}
 }
