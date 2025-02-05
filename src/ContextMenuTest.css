@@ -1,0 +1,139 @@
+#tabContextMenu {
+	--menu-width: calc(300px - 18px);
+	--button-width: calc(calc(var(--menu-width)) / 4 - 9.5px);
+	--button-height: 50px;
+	--button-bg-color: color-mix(
+		in srgb,
+		white 4%,
+		var(--arrowpanel-background) 96%
+	);
+	--button-bg-color-hover: color-mix(
+		in srgb,
+		white 7%,
+		var(--arrowpanel-background) 93%
+	);
+	--button-bg-color-active: color-mix(
+		in srgb,
+		white 12%,
+		var(--arrowpanel-background) 88%
+	);
+
+	--zen-appcontent-border: transparent 1px solid;
+
+	width: var(--menu-width) !important;
+}
+
+menuseparator {
+	&::before {
+		opacity: 0.3;
+	}
+
+	/* Hide first separator, for now */
+	&:first-of-type {
+		display: none !important;
+	}
+}
+
+menuitem {
+	/* opacity: 0.5; */
+}
+
+/* Hide option "New Tab Below" */
+#context_openANewTab {
+	display: none !important;
+}
+
+#context_reloadTab {
+	width: var(--button-width);
+	height: var(--button-height);
+	background-color: var(--button-bg-color);
+	background-position: center !important;
+	transition: background-color 100ms ease-in-out !important;
+
+	order: -20;
+
+	& .menu-text {
+		opacity: 0 !important;
+	}
+
+	&:hover {
+		background-color: var(--button-bg-color-hover) !important;
+	}
+
+	&:active {
+		background-color: var(--button-bg-color-active) !important;
+	}
+}
+
+#context_pinTab {
+	width: var(--button-width);
+	height: var(--button-height);
+	background-color: var(--button-bg-color);
+	background-position: center !important;
+	transform: translate(67px, -30px);
+	margin-bottom: -30px;
+	margin-top: -20px;
+
+	order: -19;
+
+	& .menu-text {
+		display: none !important;
+	}
+
+	&:hover {
+		background-color: var(--button-bg-color-hover) !important;
+	}
+
+	&:active {
+		background-color: var(--button-bg-color-active) !important;
+	}
+}
+
+#context_zen-add-essential {
+	width: var(--button-width);
+	height: var(--button-height);
+	background-color: var(--button-bg-color);
+	background-position: center !important;
+	transform: translate(135px, -30px);
+	margin-bottom: -30px;
+	margin-top: -20px;
+
+	order: -18;
+
+	& .menu-text {
+		display: none !important;
+	}
+
+	&:hover {
+		background-color: var(--button-bg-color-hover) !important;
+	}
+
+	&:active {
+		background-color: var(--button-bg-color-active) !important;
+	}
+}
+
+#context_bookmarkTab {
+	width: var(--button-width);
+	height: var(--button-height);
+	background-color: var(--button-bg-color);
+	background-position: center !important;
+	transform: translate(202px, -30px);
+	margin-bottom: -24px;
+	margin-top: -20px;
+
+	order: -17;
+
+	& .menu-text {
+		display: none !important;
+	}
+
+	&:hover {
+		background-color: var(--button-bg-color-hover) !important;
+	}
+
+	&:active {
+		background-color: var(--button-bg-color-active) !important;
+	}
+}
+
