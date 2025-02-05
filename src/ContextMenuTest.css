@@ -1,6 +1,14 @@
 #tabContextMenu {
-	--menu-width: calc(300px - 18px);
-	--button-width: calc(calc(var(--menu-width)) / 4 - 9.5px);
+	--menu-width: 282px;
+	--button-gap: 6px;
+	--button-width: calc(
+		calc(
+				var(--menu-width) - 2 *
+					(var(--panel-padding) + var(--panel-shadow-margin)) - 2 *
+					var(--initial-gap) + var(--button-gap)
+			) / 4 - var(--button-gap)
+	);
+	--initial-gap: calc(var(--button-gap) - var(--panel-padding));
 	--button-height: 50px;
 	--button-bg-color: color-mix(
 		in srgb,
@@ -34,10 +42,6 @@ menuseparator {
 	}
 }
 
-menuitem {
-	/* opacity: 0.5; */
-}
-
 /* Hide option "New Tab Below" */
 #context_openANewTab {
 	display: none !important;
@@ -49,6 +53,7 @@ menuitem {
 	background-color: var(--button-bg-color);
 	background-position: center !important;
 	transition: background-color 100ms ease-in-out !important;
+	transform: translate(var(--initial-gap), var(--initial-gap));
 
 	order: -20;
 
@@ -65,12 +70,16 @@ menuitem {
 	}
 }
 
-#context_pinTab {
+#context_pinTab,
+#context_unpinTab {
 	width: var(--button-width);
 	height: var(--button-height);
 	background-color: var(--button-bg-color);
 	background-position: center !important;
-	transform: translate(67px, -30px);
+	transform: translate(
+		calc(var(--button-width) + var(--button-gap) + var(--initial-gap)),
+		calc(var(--initial-gap) - 30px)
+	);
 	margin-bottom: -30px;
 	margin-top: -20px;
 
@@ -89,12 +98,16 @@ menuitem {
 	}
 }
 
-#context_zen-add-essential {
+#context_zen-add-essential,
+#context_zen-remove-essential {
 	width: var(--button-width);
 	height: var(--button-height);
 	background-color: var(--button-bg-color);
 	background-position: center !important;
-	transform: translate(135px, -30px);
+	transform: translate(
+		calc(2 * (var(--button-width) + var(--button-gap)) + var(--initial-gap)),
+		calc(var(--initial-gap) - 30px)
+	);
 	margin-bottom: -30px;
 	margin-top: -20px;
 
@@ -118,7 +131,10 @@ menuitem {
 	height: var(--button-height);
 	background-color: var(--button-bg-color);
 	background-position: center !important;
-	transform: translate(202px, -30px);
+	transform: translate(
+		calc(3 * (var(--button-width) + var(--button-gap)) + var(--initial-gap)),
+		calc(var(--initial-gap) - 30px)
+	);
 	margin-bottom: -24px;
 	margin-top: -20px;
 
@@ -136,4 +152,3 @@ menuitem {
 		background-color: var(--button-bg-color-active) !important;
 	}
 }
-
