@@ -10,5 +10,11 @@
         "label": "Bring back default Firefox icons",
         "type": "checkbox",
         "defaultValue": true
+    },
+    {
+        "property": "zen.mods.AudioIndicatorEnhanced.audioWave.enabled",
+        "label": "Audio Wave: Brings new look for audio indicator.",
+        "type": "checkbox",
+        "defaultValue": false
     }
 ]
