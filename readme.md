@@ -18,3 +18,6 @@ For now I'm focused on building first, to my taste, then expanding with options 
 | [Extension Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ExtensionMenuEnhanced)         | <img src="https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/ExtensionMenuEnhanced/image.png" width="300px" />     | Nearly done                         |
 | [Customization View Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/CustomizationViewEnhanced) | <img src="https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/CustomizationViewEnhanced/image.png" width="300px" /> | Done                                |
 | [Context Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ContextMenuOverhaul)             | <img src="https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/ContextMenuEnhanced/image.png" width="300px" />       | Nearly done                         |
+| Side Panels Enhanced | N/A | Considering feasibility |
+| Web Panels Enhanced | WIP | Considering feasibility |
+| Icons Packs | WIP | Planning |
