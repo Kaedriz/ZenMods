@@ -1,0 +1,44 @@
+[
+    {
+        "property": "zen.mods.StatusBarEnhanced.enableMargins",
+        "label": "Put margins between status panel and browser border",
+        "type": "checkbox",
+        "defaultValue": true
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.marginAmount",
+        "label": "Amount of margin between status panel and browser border (Only active if above is enabled)",
+        "type": "string",
+        "defaultValue": "3px"
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.enableBorderRadiusNative",
+        "label": "Follows border radius of Zen main browser",
+        "type": "checkbox",
+        "defaultValue": true
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.customBorderRadiusAmount",
+        "label": "Strength of border radius (Only active if above is disabled)",
+        "type": "string",
+        "defaultValue": "8px"
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.enableBackgroundColorNative",
+        "label": "Follows background color of Zen main browser (Workspaces included)",
+        "type": "checkbox",
+        "defaultValue": true
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.customBackgroundColor",
+        "label": "Custom background color for status panel (Only active if above is disabled)",
+        "type": "checkbox",
+        "defaultValue": true
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.customTextColor",
+        "label": "Custom text color for status panel",
+        "type": "checkbox",
+        "defaultValue": true
+    }
+]

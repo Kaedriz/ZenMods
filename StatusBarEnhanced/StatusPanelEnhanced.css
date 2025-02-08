@@ -1,0 +1,28 @@
+#statuspanel-label {
+	border-style: solid !important;
+
+	@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableMargins') {
+		margin: var(--zen-mods-StatusBarEnhanced-marginAmount, 3px) !important;
+
+		@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBorderRadiusNative') {
+			border-radius: var(--zen-border-radius) !important;
+		}
+
+		@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBorderRadiusNative') {
+			border-radius: var(
+				--zen-mods-StatusBarEnhanced-customBorderRadiusAmount,
+				8px
+			) !important;
+		}
+	}
+
+	@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
+		background: var(--zen-main-browser-background) !important;
+	}
+
+	@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
+		background: var(--zen-mods-StatusBarEnhanced-customBackgroundColor) !important;
+	}
+
+	color: var(--zen-mods-StatusBarEnhanced-customTextColor, initial) !important;
+}
