@@ -10,9 +10,11 @@ For now I'm focused on building first, to my taste, then expanding with options 
 
 ### Current list of mods:
 
-- [Audio Indicator Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/AudioIndicatorEnhanced) - Done
-- [Context Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ContextMenuOverhaul) - In progress
-- [Status Panel Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/StatusPanelEnhanced) - Mostly done, just not published yet
-- [Extension Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ExtensionMenuEnhanced) - Nearly done
-- [Tab Preview Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/TabPreviewEnhanced) - Done
-- [Customization View Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/CustomizationViewEnhanced) - Nearly done
+| Name                                                                                                  | Image                                                                                                      | Status                              |
+| ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| [Audio Indicator Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/AudioIndicatorEnhanced)       | ![](https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/AudioIndicatorEnhanced/image.png)    | Done                                |
+| [Tab Preview Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/TabPreviewEnhanced)               | ![](https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/TabPreviewEnhanced/image.png)        | In Progress                         |
+| [Status Panel Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/StatusPanelEnhanced)             | ![](https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/StatusPanelEnhanced/image.png)       | Mostly done, just not published yet |
+| [Extension Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ExtensionMenuEnhanced)         | ![](https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/ExtensionMenuEnhanced/image.png)     | Nearly done                         |
+| [Customization View Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/CustomizationViewEnhanced) | ![](https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/CustomizationViewEnhanced/image.png) | Done                                |
+| [Context Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ContextMenuOverhaul)             | ![](https://raw.githubusercontent.com/Kaedriz/ZenMods/refs/heads/main/ContextMenuOverhaul/image.png)       | Nearly done                         |
