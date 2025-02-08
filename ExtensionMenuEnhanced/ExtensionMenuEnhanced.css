@@ -1,53 +1,127 @@
 /* Overhauled extensions menu, much more compact */
 
 #unified-extensions-panel {
-    max-height: 600px !important;
-  
-    panelmultiview {
-      max-width: 420px !important;
-    }
-  }
-  
-  /* Hide header, footer and separators */
-  #unified-extensions-view {
-    width: fit-content !important;
-  
-    & .panel-header,
+	--button-size: 40px;
+	--gap-size: 10px;
+	--max-number-of-buttons-in-row: 8;
+	--panel-max-width: calc(
+		var(--button-size) * var(--max-number-of-buttons-in-row) + var(--gap-size) *
+			(var(--max-number-of-buttons-in-row) - 1)
+	);
+
+	/* Remove border around panel */
+	--zen-appcontent-border: transparent;
+
+	/* Make panel background match browser background */
+	--panel-background: var(--zen-main-browser-background) !important;
+
+	max-height: 600px !important;
+
+	/* Detach slightly panel from the top */
+	margin-top: 3px !important;
+
+	panelmultiview {
+		/* Take outside margins into account */
+		max-width: calc(var(--panel-max-width) + (var(--gap-size) * 2)) !important;
+	}
+}
+
+/* Hide unnecessary elements */
+#unified-extensions-view {
+	width: fit-content !important;
+
+	& .panel-header,
     toolbarseparator,
-    #unified-extensions-manage-extensions {
-      display: none !important;
-    }
-  }
-  
-  /* Hide extension settings buttons */
-  .unified-extensions-item-menu-button {
-    display: none !important;
-  }
-  
-  /* Hide text label of extension */
-  .unified-extensions-item-contents {
-    display: none !important;
-  }
-  
-  /* List of active extensions */
-  #unified-extensions-area,
-      /* List of passive extensions */
-      .unified-extensions-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: fit-content;
-    max-width: 420px;
-  
-    /* Extension button */
-    & .unified-extensions-item {
-      width: 50px;
-      height: 50px;
-  
-      margin: 5px !important;
-  
-      & > .unified-extensions-item-action-button {
-        aspect-ratio: 1 / 1;
-      }
-    }
-  }
-  
+    #unified-extensions-manage-extensions,
+    #unified-extensions-description,
+    #unified-extensions-messages-container,
+    #overflowed-extensions-list,
+    /* Hide extension settings buttons */
+    .unified-extensions-item-menu-button,
+    /* Hide text label of extension */
+    .unified-extensions-item-contents {
+		display: none !important;
+	}
+
+	& .panel-subview-body {
+		padding-top: 0 !important;
+		gap: var(--gap-size);
+		margin: var(--gap-size);
+
+		overflow: visible !important;
+	}
+}
+
+:root:has(#unified-extensions-area:empty) #unified-extensions-area,
+:root:has(.unified-extensions-list:empty) .unified-extensions-list {
+	display: none !important;
+}
+
+/* List of active extensions */
+#unified-extensions-area,
+/* List of passive extensions */
+.unified-extensions-list {
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: fit-content;
+	max-width: var(--panel-max-width);
+	gap: var(--gap-size);
+
+	/* Extension button */
+	& .unified-extensions-item {
+		width: var(--button-size);
+		height: var(--button-size);
+
+		margin: 0 !important;
+		transition: transform 150ms !important;
+
+		background-color: light-dark(
+			rgba(255, 255, 255, 0.8),
+			rgba(0, 0, 0, 0.1)
+		) !important;
+
+		&:hover {
+			background-color: light-dark(
+				rgba(255, 255, 255, 0.8),
+				rgba(0, 0, 0, 0.15)
+			) !important;
+		}
+
+		&:active {
+			background-color: light-dark(
+				rgba(255, 255, 255, 0.8),
+				rgba(0, 0, 0, 0.2)
+			) !important;
+
+			transform: scale(1.2);
+		}
+
+		& .unified-extensions-item-action-button {
+			/* Center extension icon */
+			align-items: center;
+			justify-content: center !important;
+
+			/* Make extension icon square */
+			aspect-ratio: 1 / 1;
+		}
+
+		& .toolbarbutton-badge-stack,
+		.unified-extensions-item-icon {
+			/* Remove some margin causing icon to not be centered */
+			margin-inline-end: 0 !important;
+		}
+
+		& .toolbarbutton-badge {
+			position: absolute !important;
+			top: -5px;
+			right: -6px;
+			max-width: 40px !important;
+			padding: 3px !important;
+			opacity: 0.6;
+			border-radius: 4px !important;
+			align-content: center;
+			/* text-align: center;
+			line-height: normal !important; */
+		}
+	}
+}
