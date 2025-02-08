@@ -1,4 +1,4 @@
-# Zen Mods
+# Enhanced Zen Mods
 
 <p align="center">
   <img src="https://github.com/Kaedriz/ZenMods/blob/main/assets/Logo.png?raw=true" />
@@ -10,9 +10,9 @@ For now I'm focused on building first, to my taste, then expanding with options 
 
 ### Current list of mods:
 
-- [Audio Indicator Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/AudioIndicatorEnhanced) - Nearly done, just missing customization and some tweaks
-- [Context Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ContextMenuOverhaul) - Not done yet, considering if even plausible
-- [Status Panel Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/StatusPanelEnhanced) - In progress
-- [Extension Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ExtensionMenuEnhanced) - Planned
-- [Tab Preview Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/TabPreviewEnhanced) - Planned
-- [Customization View Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/CustomizationViewEnhanced) - Planned
+- [Audio Indicator Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/AudioIndicatorEnhanced) - Done
+- [Context Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ContextMenuOverhaul) - In progress
+- [Status Panel Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/StatusPanelEnhanced) - Mostly done, just not published yet
+- [Extension Menu Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/ExtensionMenuEnhanced) - Nearly done
+- [Tab Preview Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/TabPreviewEnhanced) - Done
+- [Customization View Enhanced](https://github.com/Kaedriz/ZenMods/tree/main/CustomizationViewEnhanced) - Nearly done
