@@ -1,12 +1,16 @@
 /* Fixes missing space around top-left customizable area */
-:root:has(:not(#zen-sidebar-top-buttons-customization-target:empty))
+:root:has([customizing]):has(
+		:not(#zen-sidebar-top-buttons-customization-target:empty)
+	)
 	#zen-sidebar-top-buttons {
 	padding: var(--zen-toolbox-padding) !important;
 	padding-right: unset !important;
 }
 
 /* Makes top-left customizable area invisible when empty (except when in customize mode) */
-:root:not([customizing]):has(#zen-sidebar-top-buttons-customization-target:empty)
+:root:not([customizing]):has(
+		#zen-sidebar-top-buttons-customization-target:empty
+	)
 	#zen-sidebar-top-buttons {
 	height: 0px !important;
 	min-height: 0px !important;
