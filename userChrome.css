@@ -29,7 +29,7 @@
 @import url(AudioIndicatorEnhanced/AudioIndicatorEnhanced.css);
 
 /* Redesign of status panel */
-@import url(StatusPanelEnhanced/StatusPanelEnhanced.css);
+@import url(StatusBarEnhanced/StatusBarEnhanced.css);
 
 /* Redesign of tab preview panel */
 @import url(TabPreviewEnhanced/TabPreviewEnhanced.css);
@@ -38,4 +38,4 @@
 @import url(CustomizationViewEnhanced/CustomizationViewEnhanced.css);
 
 /* Snowflakes */
-@import url(WinterSpirit/WinterSpirit.css);
+/* @import url(WinterSpirit/WinterSpirit.css); */
