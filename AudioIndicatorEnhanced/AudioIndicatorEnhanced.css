@@ -79,11 +79,11 @@
 		/* Essential tab */
 		& .tabbrowser-tab[zen-essential='true'] {
 			--audio-button-top: -4px;
-			--audio-button-left: -4px;
+			--audio-button-left: 0px;
 			--audio-wave-top: -4px;
 			--audio-wave-left: 0px;
 		}
-	} 
+	}
 
 	/* Collapsed tab bar */
 	#navigator-toolbox:not([zen-sidebar-expanded='true'])
@@ -122,12 +122,23 @@
 		visibility: hidden;
 	}
 
+	/* Centers the tab icon, when collapsed tab bar */
 	#navigator-toolbox:not([zen-sidebar-expanded='true'])
 		#tabbrowser-tabs[orient='vertical']
-		.tabbrowser-tab
-		.tab-icon-image {
-		justify-self: center;
-		align-self: center;
+		.tabbrowser-tab {
+		& .tab-icon-image,
+		.tab-throbber {
+			place-self: center;
+		}
+	}
+
+	/* Centers the tab icon on essential tabs */
+	#navigator-toolbox
+		#tabbrowser-tabs[orient='vertical']
+		.tabbrowser-tab[zen-essential='true'] {
+		& .tab-icon-image, .tab-throbber {
+			justify-self: center;
+		}
 	}
 
 	/* Tab Icon to mute playing audio */
