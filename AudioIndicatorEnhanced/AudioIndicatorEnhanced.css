@@ -64,43 +64,48 @@
 
 /** Audio Wave version */
 @media (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.audioWave.enabled') {
-	#tabbrowser-tabs[orient='vertical'] .tabbrowser-tab {
-		--audio-button-top: -4px;
-		--audio-button-left: -3px;
-		--audio-wave-top: 0px;
-		--audio-wave-left: 0px;
-		--audio-wave-height: 17px;
-	}
+	/** Variables section */
+	/* Normal tab bar */
+	#tabbrowser-tabs[orient='vertical'] {
+		/* Normal tab */
+		& .tabbrowser-tab {
+			--audio-button-top: -4px;
+			--audio-button-left: -3px;
+			--audio-wave-top: 0px;
+			--audio-wave-left: 0px;
+			--audio-wave-height: 17px;
+		}
 
-	/* Expanded tab bar patch */
+		/* Essential tab */
+		& .tabbrowser-tab[zen-essential='true'] {
+			--audio-button-top: -4px;
+			--audio-button-left: -4px;
+			--audio-wave-top: -4px;
+			--audio-wave-left: 0px;
+		}
+	} 
+
+	/* Collapsed tab bar */
 	#navigator-toolbox:not([zen-sidebar-expanded='true'])
-		#tabbrowser-tabs[orient='vertical']
-		.tabbrowser-tab:not([zen-essential='true']) {
-		--audio-button-top: 0px;
-		--audio-button-left: 0px;
-		--audio-wave-top: 4px;
+		#tabbrowser-tabs[orient='vertical'] {
+		/* Normal tab */
+		& .tabbrowser-tab:not([zen-essential='true']) {
+			--audio-button-top: 0px;
+			--audio-button-left: 0px;
+			--audio-wave-top: 4px;
+		}
+
+		/* Essential tab */
+		& .tabbrowser-tab[zen-essential='true'] {
+			/* These 2 could be deleted, as are inherited */
+			--audio-button-top: 0px;
+			--audio-button-left: 0px;
+			--audio-wave-top: 4px;
+			--audio-wave-left: -6px;
+		}
 	}
 
-	/* Essential tabs patch */
-	#tabbrowser-tabs[orient='vertical'] .tabbrowser-tab[zen-essential='true'] {
-		--audio-button-top: -4px;
-		--audio-button-left: -4px;
-		--audio-wave-top: -4px;
-		--audio-wave-left: 158px;
-	}
-
-	/* Expanded essential tab bar patch */
-	#navigator-toolbox:not([zen-sidebar-expanded='true'])
-		#tabbrowser-tabs[orient='vertical']
-		.tabbrowser-tab[zen-essential='true'] {
-		/* These 2 could be deleted, as are inherited */
-		--audio-button-top: 0px;
-		--audio-button-left: 0px;
-		--audio-wave-top: 4px;
-		--audio-wave-left: 0px;
-	}
-
-	/* Some styling formute/unmute audio button */
+	/* Some styling for mute/unmute audio button */
 	#tabbrowser-tabs[orient='vertical']
 		.tabbrowser-tab
 		.tab-icon-overlay:not([crashed]) {
@@ -160,6 +165,31 @@
 
 		& .tab-icon-image {
 			opacity: 0 !important;
+		}
+	}
+
+	/* Patch for essential tabs */
+	#tabbrowser-tabs[orient='vertical']
+		.tabbrowser-tab[zen-essential='true']
+		.tab-icon-stack {
+		width: 100% !important;
+		justify-content: center;
+
+		&::before {
+			/* TODO: Take padding from variable */
+			width: calc(100% + 10px) !important;
+		}
+	}
+
+	/* Patch for collapsed essential tabs */
+	#navigator-toolbox:not([zen-sidebar-expanded='true'])
+		#tabbrowser-tabs[orient='vertical']
+		.tabbrowser-tab[zen-essential='true']
+		.tab-icon-stack {
+		width: var(--tab-collapsed-background-width) !important;
+
+		&::before {
+			width: var(--tab-collapsed-background-width) !important;
 		}
 	}
 
