@@ -30,9 +30,15 @@
         "defaultValue": true
     },
     {
-        "property": "zen.mods.StatusBarEnhanced.customBackgroundColor",
-        "label": "Custom background color for status panel (Only active if above is disabled)",
-        "type": "checkbox",
+        "property": "zen.mods.StatusBarEnhanced.customBackgroundColor.enabled",
+        "label": "Enabled custom background color for status panel (Only active if above is disabled)",
+        "type": "string",
+        "defaultValue": true
+    },
+    {
+        "property": "zen.mods.StatusBarEnhanced.customBackgroundColor.value",
+        "label": "Value of custom background color",
+        "type": "string",
         "defaultValue": true
     },
     {

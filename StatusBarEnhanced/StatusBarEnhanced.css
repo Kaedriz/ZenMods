@@ -21,8 +21,13 @@
 	}
 
 	@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
-		background: var(--zen-mods-StatusBarEnhanced-customBackgroundColor) !important;
+		background: var(--panel-background) !important;
 	}
+
+	@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.customBackgroundColor.enabled') {
+		background: var(--zen-mods-StatusBarEnhanced-customBackgroundColor-value, initial) !important;
+	}
+
 
 	color: var(--zen-mods-StatusBarEnhanced-customTextColor, initial) !important;
 }
