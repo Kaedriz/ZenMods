@@ -1,33 +1,56 @@
-#statuspanel-label {
-	border-style: solid !important;
+#statuspanel {
+	#statuspanel-label {
+		border-style: solid !important;
 
-	@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableMargins') {
-		margin: var(--zen-mods-StatusBarEnhanced-marginAmount, 3px) !important;
+		@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableMargins') {
+			margin: var(--zen-mods-StatusBarEnhanced-marginAmount, 3px) !important;
 
-		@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBorderRadiusNative') {
-			border-radius: var(--zen-border-radius) !important;
+			@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBorderRadiusNative') {
+				border-radius: var(--zen-border-radius) !important;
+			}
+
+			@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBorderRadiusNative') {
+				border-radius: var(
+					--zen-mods-StatusBarEnhanced-customBorderRadiusAmount,
+					8px
+				) !important;
+			}
 		}
 
-		@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBorderRadiusNative') {
-			border-radius: var(
-				--zen-mods-StatusBarEnhanced-customBorderRadiusAmount,
-				8px
+		@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
+			background: var(--zen-main-browser-background) !important;
+		}
+
+		@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
+			background: var(--panel-background) !important;
+		}
+
+		@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.customBackgroundColor.enabled') {
+			background: var(
+				--zen-mods-StatusBarEnhanced-customBackgroundColor-value,
+				initial
 			) !important;
 		}
+
+		color: var(
+			--zen-mods-StatusBarEnhanced-customTextColor,
+			initial
+		) !important;
 	}
 
 	@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
-		background: var(--zen-main-browser-background) !important;
+		--zen-sidebar-width: 341px;
+
+		& #statuspanel-label {
+			background-size: 100vw 100vh !important;
+			background-position-y: calc(30px - 100vh) !important;
+			background-position-x: calc(-20px - var(--zen-sidebar-width)) !important;
+		}
+
+		&[sizelimit="true"] #statuspanel-label {
+			background-size: 100vw 100vh !important;
+			background-position-y: calc(30px - 100vh) !important;
+			background-position-x: right -5px !important;
+		}
 	}
-
-	@media not (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.enableBackgroundColorNative') {
-		background: var(--panel-background) !important;
-	}
-
-	@media (-moz-bool-pref: 'zen.mods.StatusBarEnhanced.customBackgroundColor.enabled') {
-		background: var(--zen-mods-StatusBarEnhanced-customBackgroundColor-value, initial) !important;
-	}
-
-
-	color: var(--zen-mods-StatusBarEnhanced-customTextColor, initial) !important;
 }
