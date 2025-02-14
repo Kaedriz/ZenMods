@@ -90,27 +90,6 @@
 		margin: 0 !important;
 		transition: transform 150ms !important;
 
-		background-color: light-dark(
-			rgba(255, 255, 255, 0.8),
-			rgba(0, 0, 0, 0.1)
-		) !important;
-
-		&:hover {
-			background-color: light-dark(
-				rgba(255, 255, 255, 0.8),
-				rgba(0, 0, 0, 0.15)
-			) !important;
-		}
-
-		&:active {
-			background-color: light-dark(
-				rgba(255, 255, 255, 0.8),
-				rgba(0, 0, 0, 0.2)
-			) !important;
-
-			transform: scale(1.2);
-		}
-
 		& .unified-extensions-item-action-button {
 			/* Center extension icon */
 			align-items: center;
@@ -118,6 +97,27 @@
 
 			/* Make extension icon square */
 			aspect-ratio: 1 / 1;
+
+			background-color: light-dark(
+				rgba(255, 255, 255, 0.8),
+				rgba(0, 0, 0, 0.1)
+			) !important;
+
+			&:hover {
+				background-color: light-dark(
+					rgba(255, 255, 255, 0.8),
+					rgba(0, 0, 0, 0.15)
+				) !important;
+			}
+
+			&:active {
+				background-color: light-dark(
+					rgba(255, 255, 255, 0.8),
+					rgba(0, 0, 0, 0.2)
+				) !important;
+
+				transform: scale(1.2);
+			}
 		}
 
 		& .toolbarbutton-badge-stack,
