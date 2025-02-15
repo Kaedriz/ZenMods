@@ -13,8 +13,13 @@
 	--zen-appcontent-border: transparent;
 
 	/* Make panel background match browser background */
-	/* --panel-background: var(--zen-main-browser-background) !important; */
-	--panel-background: transparent !important;
+	@media (-moz-bool-pref: 'zen.mods.ExtensionMenuEnhanced.backgroundColorNative.enabled') {
+		--panel-background: var(--zen-main-browser-background) !important;
+	}
+
+	@media not (-moz-bool-pref: 'zen.mods.ExtensionMenuEnhanced.backgroundColorNative.enabled') and (-moz-bool-pref: 'zen.mods.ExtensionMenuEnhanced.backgroundColorNative.parallax.enabled') {
+		--panel-background: transparent !important;
+	}
 
 	/* TODO: Change to calc x8 */
 	max-height: 600px !important;
@@ -93,6 +98,11 @@
 		margin: 0 !important;
 		transition: transform 150ms !important;
 
+		/* Remove default hover effect */
+		&:hover {
+			background-color: initial !important;
+		}
+
 		& .unified-extensions-item-action-button {
 			/* Center extension icon */
 			align-items: center;
@@ -101,25 +111,60 @@
 			/* Make extension icon square */
 			aspect-ratio: 1 / 1;
 
-			background-color: light-dark(
-				rgba(255, 255, 255, 0.8),
-				rgba(0, 0, 0, 0.1)
-			) !important;
+			transition: background-color 150ms, transform 150ms !important;
+
+			@media (-moz-bool-pref: 'zen.mods.ExtensionMenuEnhanced.buttons.background.enabled') {
+				background-color: light-dark(
+					rgba(0, 0, 0, 0.05),
+					rgba(0, 0, 0, 0.1)
+				) !important;
+			}
 
 			&:hover {
 				background-color: light-dark(
-					rgba(255, 255, 255, 0.8),
-					rgba(0, 0, 0, 0.15)
+					rgba(0, 0, 0, 0.1),
+					rgba(0, 0, 0, 0.2)
 				) !important;
 			}
 
 			&:active {
 				background-color: light-dark(
-					rgba(255, 255, 255, 0.8),
-					rgba(0, 0, 0, 0.2)
+					rgba(0, 0, 0, 0.15)
+					rgba(0, 0, 0, 0.25)
 				) !important;
 
 				transform: scale(1.2);
+			}
+
+			@media (-moz-bool-pref: 'zen.mods.ExtensionMenuEnhanced.buttons.disabledBackground.color') {
+				&[disabled] {
+					--slash-color: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+
+					background: linear-gradient(
+						45deg,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0) 9%,
+						var(--slash-color) 10%,
+						var(--slash-color) 19%,
+						rgba(0, 0, 0, 0) 20%,
+						rgba(0, 0, 0, 0) 29%,
+						var(--slash-color) 30%,
+						var(--slash-color) 39%,
+						rgba(0, 0, 0, 0) 40%,
+						rgba(0, 0, 0, 0) 49%,
+						var(--slash-color) 50%,
+						var(--slash-color) 59%,
+						rgba(0, 0, 0, 0) 60%,
+						rgba(0, 0, 0, 0) 69%,
+						var(--slash-color) 70%,
+						var(--slash-color) 79%,
+						rgba(0, 0, 0, 0) 80%,
+						rgba(0, 0, 0, 0) 89%,
+						var(--slash-color) 90%,
+						var(--slash-color) 99%,
+						rgba(0, 0, 0, 0) 100%
+					);
+				}
 			}
 		}
 
@@ -129,13 +174,15 @@
 			margin-inline-end: 0 !important;
 		}
 
+		/* Style extension number badge */
 		& .toolbarbutton-badge {
 			position: absolute !important;
 			top: -5px;
 			right: -6px;
 			max-width: 40px !important;
 			padding: 3px !important;
-			opacity: 0.6;
+			box-shadow: none !important;
+			/* opacity: 0.6; */
 			border-radius: 4px !important;
 			align-content: center;
 			/* text-align: center;
