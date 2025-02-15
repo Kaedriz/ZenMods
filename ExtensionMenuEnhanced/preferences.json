@@ -27,12 +27,12 @@
         "property": "zen.mods.ExtensionMenuEnhanced.buttons.background.enabled",
         "label": "Show background behind extension buttons",
         "type": "checkbox",
-        "defaultValue": "true"
+        "defaultValue": true
     },
     {
         "property": "zen.mods.ExtensionMenuEnhanced.buttons.disabledBackground.color",
         "label": "Show special background behind passive extension buttons (Ones at the bottom(",
         "type": "checkbox",
-        "defaultValue": "true"
+        "defaultValue": true
     }
 ]
