@@ -25,9 +25,11 @@
 	& panelmultiview {
 		/* Take outside margins into account */
 		max-width: calc(var(--panel-max-width) + (var(--gap-size) * 2)) !important;
+
+		position: relative !important;
 	}
 
-	& panelmultiview::before {
+	/* & panelmultiview::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -36,10 +38,10 @@
 		height: 100%;
 		background: var(--zen-main-browser-background);
 		z-index: -1;
-		background-size: 100vw 100vh;
-		/* Example values, should be somewhat extracted from browser */
-		background-position: -1533px -30px;
-	}
+		background-size: 100vw 100vh; */
+	/* Example values, should be somewhat extracted from browser */
+	/* background-position: -1533px -30px;
+	} */
 }
 
 /* Hide unnecessary elements */
