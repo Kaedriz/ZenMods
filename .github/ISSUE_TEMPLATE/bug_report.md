@@ -26,4 +26,4 @@ A clear and concise description of what you expected to happen.
 **Information (please complete the following information):**
  - OS: [e.g. Windows/Mac/Linux]
  - Zen Version: [e.g. 1.7.5b]
- - Mod Name: [e.g. Tab Preview Enhanced]
+ - Mod Name and Version: [e.g. Tab Preview Enhanced v1.0.3]
