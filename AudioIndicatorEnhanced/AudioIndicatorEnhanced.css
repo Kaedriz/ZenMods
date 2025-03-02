@@ -1,3 +1,36 @@
+/** Globals styles, regardless of mode */
+
+/* Resizes the glance tab indicator on essential tabs */
+#navigator-toolbox
+	#tabbrowser-tabs[orient='vertical']
+	.tabbrowser-tab[zen-essential='true']
+	.tabbrowser-tab[zen-glance-tab='true'] {
+	--tab-collapsed-width: 24px !important;
+	--tab-min-width: 16px !important;
+
+	& .tab-icon-stack {
+		align-content: center;
+	}
+}
+
+/* Centers & resizes the glance tab indicator, to be more cohesive across essential & pinned tabs */
+#navigator-toolbox
+	#tabbrowser-tabs[orient='vertical']
+	.tabbrowser-tab[zen-glance-tab='true'] {
+	& .tab-content {
+		padding: 0px !important;
+	}
+
+	& .tab-icon-stack {
+		height: var(--tab-min-height, 24px) !important;
+		width: var(--tab-min-width, 24px) !important;
+
+		& .tab-icon-image,
+		.tab-throbber {
+			place-self: center;
+		}
+	}
+}
 @media not (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.audioWave.enabled') {
 	#tabbrowser-tabs[orient='vertical']
 		.tabbrowser-tab
