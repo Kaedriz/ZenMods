@@ -109,6 +109,21 @@
 			place-self: center;
 		}
 	}
+
+	/* Change positioning of indicator on essential tabs */
+	#navigator-toolbox[zen-sidebar-expanded='true']
+		#tabbrowser-tabs[orient='vertical']
+		.tabbrowser-tab[zen-essential='true'] {
+		--tab-inline-padding: 0px !important;
+
+		& .tab-icon-overlay:not([crashed]) {
+			/* position: absolute !important; */
+			top: 0px !important;
+			right: 0px !important;
+			margin: 4px !important;
+			place-self: start end;
+		}
+	}
 }
 
 /* Standardize tab icon size, to prevent size flexing */
