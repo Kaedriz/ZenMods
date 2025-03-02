@@ -205,48 +205,6 @@
 		}
 	}
 
-	/* Centers the tab icon on essential tabs */
-	#navigator-toolbox
-		#tabbrowser-tabs[orient='vertical']
-		.tabbrowser-tab[zen-essential='true'] {
-		& .tab-icon-image,
-		.tab-throbber {
-			justify-self: center;
-		}
-	}
-
-	/* Centers & resizes the glance tab indicator, to be more cohesive across essential & pinned tabs */
-	#navigator-toolbox
-		#tabbrowser-tabs[orient='vertical']
-		.tabbrowser-tab[zen-glance-tab='true'] {
-		& .tab-content {
-			padding: 0px !important;
-		}
-
-		& .tab-icon-stack {
-			height: var(--tab-min-height, 24px) !important;
-			width: var(--tab-min-width, 24px) !important;
-
-			& .tab-icon-image,
-			.tab-throbber {
-				place-self: center;
-			}
-		}
-	}
-
-	/* Resizes the glance tab indicator on essential tabs */
-	#navigator-toolbox
-		#tabbrowser-tabs[orient='vertical']
-		.tabbrowser-tab[zen-essential='true']
-		.tabbrowser-tab[zen-glance-tab='true'] {
-		--tab-collapsed-width: 24px !important;
-		--tab-min-width: 16px !important;
-
-		& .tab-icon-stack {
-			align-content: center;
-		}
-	}
-
 	/* Tab Icon to mute playing audio */
 	#tabbrowser-tabs[orient='vertical']
 		.tabbrowser-tab[soundplaying]:not([zen-glance-tab]):hover
@@ -347,7 +305,7 @@
 		transition: fill 1000ms ease-in-out, opacity 1000ms ease-in-out;
 	}
 
-	/* Compability patch for hidden tab bar */
+	/* Compatibility patch for hidden tab bar */
 	#zen-main-app-wrapper[zen-compact-mode='true']
 		.tabbrowser-tab
 		.tab-icon-stack::before {
