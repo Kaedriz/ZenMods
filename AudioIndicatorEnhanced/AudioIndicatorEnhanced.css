@@ -31,6 +31,18 @@
 		}
 	}
 }
+
+/* Centers the tab icon on essential tabs */
+#navigator-toolbox
+	#tabbrowser-tabs[orient='vertical']
+	.tabbrowser-tab[zen-essential='true'] {
+	& .tab-icon-image,
+	.tab-throbber {
+		justify-self: center;
+	}
+}
+
+/** Legacy Mode - Round circle */
 @media not (-moz-bool-pref: 'zen.mods.AudioIndicatorEnhanced.audioWave.enabled') {
 	#tabbrowser-tabs[orient='vertical']
 		.tabbrowser-tab
@@ -82,6 +94,19 @@
 			&[activemedia-blocked] {
 				list-style-image: none !important;
 			}
+		}
+	}
+
+	#navigator-toolbox[zen-sidebar-expanded='true']
+		#tabbrowser-tabs[orient='vertical']
+		.tabbrowser-tab[zen-essential='true']
+		.tab-icon-stack {
+		width: 100% !important;
+		height: 100% !important;
+
+		& .tab-icon-image,
+		.tab-throbber {
+			place-self: center;
 		}
 	}
 }
