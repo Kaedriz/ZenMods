@@ -397,6 +397,16 @@
 				justify-self: center !important;
 			}
 		}
+
+		#tabbrowser-tabs[orient='vertical']
+			.tabbrowser-tab[pinned]
+			.tab-icon-stack::before {
+			bottom: 5px !important;
+		}
+		
+		.tab-content {
+			border-radius: var(--border-radius-medium) !important;
+		}
 	}
   
   	/* Patch for collapsed essential tabs */
