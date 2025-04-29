@@ -16,5 +16,11 @@
         "label": "Audio Wave: Brings new look for audio indicator.",
         "type": "checkbox",
         "defaultValue": false
+    },
+    {
+        "property": "zen.mods.AudioIndicatorEnhanced.reverseAudioIcons",
+        "label": "Reverse audio icons.",
+        "type": "checkbox",
+        "defaultValue": false
     }
 ]
