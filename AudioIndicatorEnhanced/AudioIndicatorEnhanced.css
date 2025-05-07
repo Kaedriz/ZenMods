@@ -48,6 +48,7 @@
 		.tabbrowser-tab
 		.tab-icon-overlay:not([crashed]) {
 		&:is([soundplaying], [muted], [activemedia-blocked]) {
+			display: flex !important;
 			background-color: #161717 !important;
 			border: 1px solid #ffffff29 !important;
 			transition: transform 100ms ease-in-out,
