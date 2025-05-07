@@ -489,6 +489,39 @@
 		width: calc(var(--zen-sidebar-width) - 30px) !important;
 	}
 
+	/* Patch for Split Tabs */
+	tab-group[split-view-group="true"] .tabbrowser-tab .tab-icon-stack::before {
+		/* outline: 2px solid red !important; */
+
+		--audio-wave-top: 4px;
+		--audio-wave-left: 0px;
+	}
+
+	tab-group[split-view-group="true"] .tabbrowser-tab {
+		/* Section based on how many tabs are split */
+
+		/* 2 split tabs */
+		&:nth-of-type(1):nth-last-of-type(2) .tab-icon-stack::before,
+		&:nth-of-type(2):nth-last-of-type(1) .tab-icon-stack::before {
+			width: calc(var(--zen-sidebar-width) / 2 - 11px) !important;
+		}
+
+		/* 3 split tabs */
+		&:nth-of-type(1):nth-last-of-type(3) .tab-icon-stack::before,
+		&:nth-of-type(2):nth-last-of-type(2) .tab-icon-stack::before,
+		&:nth-of-type(3):nth-last-of-type(1) .tab-icon-stack::before {
+			width: calc(var(--zen-sidebar-width) / 3 - 8px) !important;
+		}
+
+		/* 4 split tabs */
+		&:nth-of-type(1):nth-last-of-type(4) .tab-icon-stack::before,
+		&:nth-of-type(2):nth-last-of-type(3) .tab-icon-stack::before,
+		&:nth-of-type(3):nth-last-of-type(2) .tab-icon-stack::before,
+		&:nth-of-type(4):nth-last-of-type(1) .tab-icon-stack::before {
+			width: calc(var(--zen-sidebar-width) / 4 - 8px) !important;
+		}
+	}
+
 	/* TODO: Attempt at different animation for subset of tabs, will need manual re-timing of each svg animation sadly */
 	.tabbrowser-tab[soundplaying] {
 		/* 4s delay */
