@@ -1,5 +1,10 @@
 /** Globals styles, regardless of mode */
 
+/* Remove native audio indicator button */
+.tab-audio-button {
+	display: none !important;
+}
+
 /* Resizes the glance tab indicator on essential tabs */
 #navigator-toolbox
 	#tabbrowser-tabs[orient="vertical"]
