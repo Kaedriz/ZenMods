@@ -241,21 +241,23 @@
 			--audio-wave-height: 17px;
 		}
 
+		/* Patch for SuperPins */
+		@media (-moz-bool-pref: "uc.pins.legacy-layout") {
+			/* Pinned tab */
+			& .tabbrowser-tab[pinned] {
+				--audio-button-top: -4px;
+				--audio-button-left: 0px;
+				--audio-wave-top: -6px;
+				--audio-wave-left: 0px;
+			}
+		}
+
 		/* Essential tab */
 		& .tabbrowser-tab[zen-essential="true"] {
 			--audio-button-top: -4px;
 			--audio-button-left: 0px;
 			--audio-wave-top: -4px;
 			--audio-wave-left: 0px;
-		}
-
-		@media (-moz-bool-pref: "uc.pins.legacy-layout") {
-			& .tabbrowser-tab[pinned] {
-				--audio-button-top: -4px;
-				--audio-button-left: 0px;
-				--audio-wave-top: -4px;
-				--audio-wave-left: 0px;
-			}
 		}
 	}
 
@@ -265,8 +267,20 @@
 		/* Normal tab */
 		& .tabbrowser-tab:not([zen-essential="true"]) {
 			--audio-button-top: 0px;
-			--audio-button-left: 0px;
+			--audio-button-left: 6px;
 			--audio-wave-top: 4px;
+			--audio-wave-left: -6px;
+		}
+
+		/* Patch for SuperPins */
+		@media (-moz-bool-pref: "uc.pins.legacy-layout") {
+			/* Pinned tab */
+			& .tabbrowser-tab[pinned] {
+				--audio-button-top: 0px;
+				--audio-button-left: 0px;
+				--audio-wave-top: -2px;
+				--audio-wave-left: -6px;
+			}
 		}
 
 		/* Essential tab */
@@ -368,21 +382,9 @@
 		}
 	}
 
-	/* Patch for essential tabs */
-	#tabbrowser-tabs[orient="vertical"]
-		.tabbrowser-tab[zen-essential="true"]
-		.tab-icon-stack {
-		width: 100% !important;
-		justify-content: center;
-
-		&::before {
-			/* TODO: Take padding from variable */
-			width: calc(100% + 10px) !important;
-		}
-	}
-
-	/* Patch for SuperPins */
+	/* Patches for SuperPins compatibility */
 	@media (-moz-bool-pref: "uc.pins.legacy-layout") {
+		/* Patch for pinned tabs with SuperPins */
 		#tabbrowser-tabs[orient="vertical"]
 			.tabbrowser-tab[pinned]
 			.tab-icon-stack {
@@ -391,7 +393,7 @@
 
 			&::before {
 				/* TODO: Take padding from variable */
-				width: calc(100% + 10px) !important;
+				width: calc(100% + 12px) !important;
 			}
 
 			& .tab-icon-image {
@@ -407,6 +409,31 @@
 
 		.tabbrowser-tab[pinned]:not([zen-essential="true"]) .tab-content {
 			border-radius: var(--border-radius-medium) !important;
+		}
+
+		/* Patch for collapsed pinned tabs with SuperPins  */
+		#navigator-toolbox:not([zen-sidebar-expanded="true"])
+			#tabbrowser-tabs[orient="vertical"]
+			.tabbrowser-tab
+			.tab-icon-stack {
+			width: var(--tab-collapsed-background-width) !important;
+
+			&::before {
+				width: var(--tab-collapsed-background-width) !important;
+			}
+		}
+	}
+
+	/* Patch for essential tabs */
+	#tabbrowser-tabs[orient="vertical"]
+		.tabbrowser-tab[zen-essential="true"]
+		.tab-icon-stack {
+		width: 100% !important;
+		justify-content: center;
+
+		&::before {
+			/* TODO: Take padding from variable */
+			width: calc(100% + 10px) !important;
 		}
 	}
 
