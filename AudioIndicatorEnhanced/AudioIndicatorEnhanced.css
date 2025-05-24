@@ -271,7 +271,7 @@
 	#navigator-toolbox:not([zen-sidebar-expanded="true"])
 		#tabbrowser-tabs[orient="vertical"] {
 		/* Normal tab */
-		& .tabbrowser-tab:not([zen-essential="true"]) {
+		& .tabbrowser-tab {
 			--audio-button-top: 0px;
 			--audio-button-left: 6px;
 			--audio-wave-top: 4px;
@@ -296,6 +296,45 @@
 			--audio-button-left: 0px;
 			--audio-wave-top: 4px;
 			--audio-wave-left: -6px;
+		}
+	}
+
+	/* Split tabs */
+	#tabbrowser-tabs[orient="vertical"] tab-group[split-view-group="true"] {
+		/* Normal tab */
+		& .tabbrowser-tab {
+			--audio-wave-top: 4px;
+			--audio-wave-left: 0px;
+		}
+
+		/* Patch for SuperPins */
+		@media (-moz-bool-pref: "uc.pins.legacy-layout") {
+			/* Pinned tab */
+			& .tabbrowser-tab[pinned] {
+				--audio-wave-top: -2px;
+				--audio-wave-left: 0px;
+			}
+		}
+	}
+
+	/* Collapsed tab bar & Split tabs */
+	#navigator-toolbox:not([zen-sidebar-expanded="true"]) {
+		#tabbrowser-tabs[orient="vertical"] tab-group[split-view-group="true"] {
+			/* Normal tab */
+			& .tabbrowser-tab {
+				--audio-button-left: 0px;
+				--audio-wave-top: 7px;
+				--audio-wave-left: 0px;
+			}
+
+			/* Patch for SuperPins */
+			@media (-moz-bool-pref: "uc.pins.legacy-layout") {
+				/* Pinned tab */
+				& .tabbrowser-tab[pinned] {
+					--audio-wave-top: 1px;
+					--audio-wave-left: -6px;
+				}
+			}
 		}
 	}
 
@@ -482,6 +521,15 @@
 		transition: fill 1000ms ease-in-out, opacity 1000ms ease-in-out;
 	}
 
+	/* Compatibility patch for collapsed split tabs */
+	tab-group[split-view-group="true"]
+		.tabbrowser-tab:not([zen-glance-tab])
+		> .tab-stack
+		> .tab-content
+		> .tab-icon-stack::before {
+			width: calc(var(--zen-sidebar-width) - 14px) !important;
+	}
+
 	/* Compatibility patch for hidden tab bar */
 	#zen-main-app-wrapper[zen-compact-mode="true"]
 		.tabbrowser-tab
@@ -490,14 +538,9 @@
 	}
 
 	/* Patch for Split Tabs */
-	tab-group[split-view-group="true"] .tabbrowser-tab .tab-icon-stack::before {
-		/* outline: 2px solid red !important; */
-
-		--audio-wave-top: 4px;
-		--audio-wave-left: 0px;
-	}
-
-	tab-group[split-view-group="true"] .tabbrowser-tab {
+	#navigator-toolbox[zen-sidebar-expanded="true"]
+		tab-group[split-view-group="true"]
+		.tabbrowser-tab {
 		/* Section based on how many tabs are split */
 
 		/* 2 split tabs */
