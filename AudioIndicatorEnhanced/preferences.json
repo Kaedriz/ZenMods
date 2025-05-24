@@ -7,7 +7,7 @@
     },
     {
         "property": "zen.mods.AudioIndicatorEnhanced.returnOldIcons",
-        "label": "Bring back default Firefox icons",
+        "label": "Bring back default Firefox icons (Not applicable to Audio Wave mode)",
         "type": "checkbox",
         "defaultValue": true
     },
