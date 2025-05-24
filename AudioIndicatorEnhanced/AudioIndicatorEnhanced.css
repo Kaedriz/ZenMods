@@ -137,8 +137,8 @@
 			margin: 5px !important;
 
 			background-color: hsl(180, 2%, 9%, 50%) !important;
-			border: 1px solid hsla(0, 0%, 100%, 10%) !important;
-			background-size: 75% !important;
+			border: 1px solid hsla(0, 0%, 100%, 3%) !important;
+			background-size: 65% !important;
 			border-radius: 7px !important;
 			transform-origin: top right !important;
 
