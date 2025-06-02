@@ -3,34 +3,41 @@
 /* TODO: Add detection */
 
 /** Default Context Menu */
-@media (-moz-bool-pref: 'zen.ContextMenuOverhaul.defaultContextMenuEnabled') {
-  /* Detection of active menu */
-  :root:has(#context-navigation:not([hidden])) {
-    @media (-moz-bool-pref: 'zen.ContextMenuOverhaul.defaultContextMenu.navigation') {
-      #context-navigation {
-        display: none !important;
-      }
-    }
+@media (-moz-bool-pref: "zen.ContextMenuOverhaul.defaultContextMenuEnabled") {
+	/* Detection of active menu */
+	:root:has(#context-navigation:not([hidden])) {
+		@media (-moz-bool-pref: "zen.ContextMenuOverhaul.defaultContextMenu.navigation") {
+			#context-navigation {
+				display: none !important;
+			}
+		}
 
-    /* Save Page As... */
-    @media (-moz-bool-pref: 'zen.ContextMenuOverhaul.defaultContextMenu.savepage.order') {
-      #context-savepage {
-        order: var(--zen-ContextMenuOverhaul-defaultContextMenu-savepage-order);
-      }
-    }
+		/* Save Page As... */
+		@media (-moz-bool-pref: "zen.ContextMenuOverhaul.defaultContextMenu.savepage.order") {
+			#context-savepage {
+				order: var(
+					--zen-ContextMenuOverhaul-defaultContextMenu-savepage-order
+				);
+			}
+		}
 
-    /* Send Page to Device */
-    /* @media (-moz-bool-pref: 'zen.ContextMenuOverhaul.defaultContextMenu.sendpagetodevice.order') { */
-      #context-sendpagetodevice {
-        order: var(--zen-ContextMenuOverhaul-defaultContextMenu-sendpagetodevice-order, 2);
-      }
-    /* } */
+		/* Send Page to Device */
+		/* @media (-moz-bool-pref: 'zen.ContextMenuOverhaul.defaultContextMenu.sendpagetodevice.order') { */
+		#context-sendpagetodevice {
+			order: var(
+				--zen-ContextMenuOverhaul-defaultContextMenu-sendpagetodevice-order,
+				2
+			);
+		}
+		/* } */
 
-    /* Select All */
-    @media (-moz-bool-pref: 'zen.ContextMenuOverhaul.defaultContextMenu.selectall.order') {
-      #context-selectall {
-        order: var(--zen-ContextMenuOverhaul-defaultContextMenu-selectall-order);
-      }
-    }
-  }
+		/* Select All */
+		@media (-moz-bool-pref: "zen.ContextMenuOverhaul.defaultContextMenu.selectall.order") {
+			#context-selectall {
+				order: var(
+					--zen-ContextMenuOverhaul-defaultContextMenu-selectall-order
+				);
+			}
+		}
+	}
 }

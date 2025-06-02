@@ -2,415 +2,415 @@
 
 /* No Spelling Suggestions */
 #spell-no-suggestions::before {
-  order: initial;
+	order: initial;
 }
 
 /* Add to Dictionary */
 #spell-add-to-dictionary::before {
-  order: initial;
+	order: initial;
 }
 
 /* Undo Add To Dictionary */
 #spell-undo-add-to-dictionary::before {
-  order: initial;
+	order: initial;
 }
 
 /* ???? */
 #context-openlinkincurrent::before {
-  order: initial;
+	order: initial;
 }
 
 /* ???? */
 #context-openlinkincontainertab::before {
-  order: initial;
+	order: initial;
 }
 
 /* Open Link in New Tab */
 #context-openlinkintab::before {
-  order: initial;
+	order: initial;
 }
 
 /* Open Link in New Container Tab */
 #context-openlinkinusercontext-menu::before {
-  order: initial;
+	order: initial;
 }
 
 /* Open Link in New Window */
 #context-openlink::before {
-  order: initial;
+	order: initial;
 }
 
 /* Open Link in New Private Window */
 #context-openlinkprivate::before {
-  order: initial;
+	order: initial;
 }
 
 /* Bookmark Link… */
 #context-bookmarklink::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Link As… */
 #context-savelink::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Link to Pocket */
 #context-savelinktopocket::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Email Address */
 #context-copyemail::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Phone Number */
 #context-copyphone::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Link */
 #context-copylink::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Link Without Site Tracking */
 #context-stripOnShareLink::before {
-  order: initial;
+	order: initial;
 }
 
 /* Send Link to Device */
 #context-sendlinktodevice::before {
-  order: initial;
+	order: initial;
 }
 
 /* Play */
 #context-media-play::before {
-  order: initial;
+	order: initial;
 }
 
 /* Mute */
 #context-media-mute::before {
-  order: initial;
+	order: initial;
 }
 
 /* Unmute */
 #context-media-unmute::before {
-  order: initial;
+	order: initial;
 }
 
 /* Speed */
 #context-media-unmute::before {
-  order: initial;
+	order: initial;
 }
 
 /* Loop */
 #context-media-loop::before {
-  order: initial;
+	order: initial;
 }
 
 /* Exit Full Screen */
 #context-leave-dom-fullscreen::before {
-  order: initial;
+	order: initial;
 }
 
 /* Full Screen */
 #context-video-fullscreen::before {
-  order: initial;
+	order: initial;
 }
 
 /* Hide Controls */
 #context-media-hidecontrols::before {
-  order: initial;
+	order: initial;
 }
 
 /* Show Controls */
 #context-media-showcontrols::before {
-  order: initial;
+	order: initial;
 }
 
 /* Open Video in New Tab */
 #context-viewvideo::before {
-  order: initial;
+	order: initial;
 }
 
 /* Watch in Picture-in-Picture */
 #context-video-pictureinpicture::before {
-  order: initial;
+	order: initial;
 }
 
 /* Reload Image */
 #context-reloadimage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Open Image in New Tab */
 #context-viewimage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Image As… */
 #context-saveimage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Take Snapshot… */
 #context-video-saveimage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Video As… */
 #context-savevideo::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Audio As… */
 #context-saveaudio::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Image */
 #context-copyimage-contents::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Image Link */
 #context-copyimage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Video Link */
 #context-copyvideourl::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Audio Link */
 #context-copyaudiourl::before {
-  order: initial;
+	order: initial;
 }
 
 /* Email Image… */
 #context-sendimage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Email Video… */
 #context-sendvideo::before {
-  order: initial;
+	order: initial;
 }
 
 /* Email Audio… */
 #context-sendaudio::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy Text From Image */
 #context-imagetext::before {
-  order: initial;
+	order: initial;
 }
 
 /* View Image Info */
 #context-viewimageinfo::before {
-  order: initial;
+	order: initial;
 }
 
 /* View Description */
 #context-viewimagedesc::before {
-  order: initial;
+	order: initial;
 }
 
 /* Set Image as Desktop Background… */
 #context-setDesktopBackground::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Page As… */
 #context-savepage::before {
-  order: initial;
+	order: initial;
 }
 
 /* Save Page to Pocket */
 #context-pocket::before {
-  order: initial;
+	order: initial;
 }
 
 /* Send Page to Device */
 #context-sendpagetodevice::before {
-  order: initial;
+	order: initial;
 }
 
 /* Suggest Strong Password… */
 #fill-login-generated-password::before {
-  order: initial;
+	order: initial;
 }
 /* Use Relay Email Mask */
 #use-relay-mask::before {
-  order: initial;
+	order: initial;
 }
 /* Manage Passwords */
 #manage-saved-logins::before {
-  order: initial;
+	order: initial;
 }
 
 /*? */
 #context-undo::before {
-  order: initial;
+	order: initial;
 }
 
 /*? */
 #context-redo::before {
-  order: initial;
+	order: initial;
 }
 
 /* Cut */
 #context-cut::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy */
 #context-copy::before {
-  order: initial;
+	order: initial;
 }
 
 /* Paste */
 #context-paste::before {
-  order: initial;
+	order: initial;
 }
 
 /* Paste Without Formatting */
 #context-paste-no-formatting::before {
-  order: initial;
+	order: initial;
 }
 
 /* Delete */
 #context-delete::before {
-  order: initial;
+	order: initial;
 }
 
 /* Select All */
 #context-selectall::before {
-  order: initial;
+	order: initial;
 }
 
 /* Highlight Selection */
 #context-pdfjs-highlight-selection::before {
-  order: initial;
+	order: initial;
 }
 
 /* Reveal Password */
 #context-reveal-password::before {
-  order: initial;
+	order: initial;
 }
 
 /* Print Selection… */
 #context-print-selection::before {
-  order: initial;
+	order: initial;
 }
 
 /* Undo */
 #context-pdfjs-undo::before {
-  order: initial;
+	order: initial;
 }
 
 /* Redo */
 #context-pdfjs-redo::before {
-  order: initial;
+	order: initial;
 }
 
 /* Cut */
 #context-pdfjs-cut::before {
-  order: initial;
+	order: initial;
 }
 
 /* Copy */
 #context-pdfjs-copy::before {
-  order: initial;
+	order: initial;
 }
 
 /* Paste */
 #context-pdfjs-paste::before {
-  order: initial;
+	order: initial;
 }
 
 /* Delete */
 #context-pdfjs-delete::before {
-  order: initial;
+	order: initial;
 }
 
 /* Select All */
 #context-pdfjs-selectall::before {
-  order: initial;
+	order: initial;
 }
 
 /* Take Screenshot */
 #context-take-screenshot::before {
-  order: initial;
+	order: initial;
 }
 
 /* Add a Keyword for this Search… */
 #context-keywordfield::before {
-  order: initial;
+	order: initial;
 }
 
 /* Search XXX for "xxx" */
 #context-searchselect::before {
-  order: initial;
+	order: initial;
 }
 
 /* Translate Selection… */
 #context-translate-selection::before {
-  order: initial;
+	order: initial;
 }
 
 /* Check Spelling */
 #spell-check-enabled::before {
-  order: initial;
+	order: initial;
 }
 
 /* Add Dictionaries… */
 #spell-add-dictionaries-main::before {
-  order: initial;
+	order: initial;
 }
 
 /* Languages */
 #spell-dictionaries::before {
-  order: initial;
+	order: initial;
 }
 
 /* Switch Text Direction */
 #context-bidi-text-direction-toggle::before {
-  order: initial;
+	order: initial;
 }
 
 /* Switch Page Direction */
 #context-bidi-page-direction-toggle::before {
-  order: initial;
+	order: initial;
 }
 
 /* View Selection Source */
 #context-viewpartialsource-selection::before {
-  order: initial;
+	order: initial;
 }
 
 /* View Page Source */
 #context-viewsource::before {
-  order: initial;
+	order: initial;
 }
 
 /* Inspect Accessibility Properties */
 #context-inspect-a11y::before {
-  order: initial;
+	order: initial;
 }
 
 /* Inspect */
 #context-inspect::before {
-  order: initial;
+	order: initial;
 }
 
 /* Learn more about DRM…  */
 #context-media-eme-learner::before {
-  order: initial;
+	order: initial;
 }
 
 /* Icons of extensions context menu items */
