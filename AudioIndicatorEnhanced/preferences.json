@@ -1,28 +1,28 @@
 [
-    {
-        "property": "zen.mods.AudioIndicatorEnhanced.hoverScaleAnimationEnabled",
-        "label": "Increases indicator size on hover",
-        "type": "checkbox",
-        "defaultValue": true
-    },
-    {
-        "property": "zen.mods.AudioIndicatorEnhanced.returnOldIcons",
-        "label": "Bring back default Firefox icons (Not applicable to Audio Wave mode)",
-        "type": "checkbox",
-        "defaultValue": true
-    },
-    {
-        "property": "zen.mods.AudioIndicatorEnhanced.audioWave.enabled",
-        "label": "Audio Wave: Brings new look for audio indicator.",
-        "type": "checkbox",
-        "defaultValue": false
-    },
-    {
-        "property": "zen.mods.AudioIndicatorEnhanced.reverseAudioIcons",
-        "label": "Reverse audio icons.",
-        "type": "checkbox",
-        "defaultValue": false
-    },
+	{
+		"property": "zen.mods.AudioIndicatorEnhanced.hoverScaleAnimationEnabled",
+		"label": "Increases indicator size on hover",
+		"type": "checkbox",
+		"defaultValue": true
+	},
+	{
+		"property": "zen.mods.AudioIndicatorEnhanced.returnOldIcons",
+		"label": "Bring back default Firefox icons (Not applicable to Audio Wave mode)",
+		"type": "checkbox",
+		"defaultValue": true
+	},
+	{
+		"property": "zen.mods.AudioIndicatorEnhanced.audioWave.enabled",
+		"label": "Audio Wave: Brings new look for audio indicator.",
+		"type": "checkbox",
+		"defaultValue": false
+	},
+	{
+		"property": "zen.mods.AudioIndicatorEnhanced.reverseAudioIcons",
+		"label": "Reverse audio icons.",
+		"type": "checkbox",
+		"defaultValue": false
+	},
 	{
 		"property": "zen.mods.AudioIndicatorEnhanced.audioWave.opacity",
 		"label": "Audio Wave: Opacity of the audio wave.",
@@ -40,5 +40,11 @@
 		"label": "Audio Wave: Color of the audio wave (When audio is muted).",
 		"type": "string",
 		"defaultValue": "color-mix(in srgb, -moz-dialogtext 50%, rgb(129, 0, 0) 50%)"
+	},
+	{
+		"property": "zen.mods.AudioIndicatorEnhanced.bigEssentialIcons.enabled",
+		"label": "Makes Essential icons bigger. (Doesn't work with Audio Wave mode)",
+		"type": "checkbox",
+		"defaultValue": false
 	}
 ]

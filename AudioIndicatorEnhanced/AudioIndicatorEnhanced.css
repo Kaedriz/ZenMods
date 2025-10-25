@@ -225,6 +225,18 @@
 			place-self: start end;
 		}
 	}
+
+	/* Large Essential Icons Mode */
+	@media (-moz-bool-pref: "zen.mods.AudioIndicatorEnhanced.bigEssentialIcons.enabled") {
+		#navigator-toolbox
+			#tabbrowser-tabs[orient="vertical"]
+			.tabbrowser-tab[zen-essential="true"] {
+			& .tab-icon-image {
+				width: 32px !important;
+				height: 32px !important;
+			}
+		}
+	}
 }
 
 /* Standardize tab icon size, to prevent size flexing */
