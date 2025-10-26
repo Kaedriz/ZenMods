@@ -1,5 +1,11 @@
 [
 	{
+		"property": "browser.tabs.hoverPreview.enabled",
+		"label": "Enable Zen's tab previews.",
+		"type": "checkbox",
+		"defaultValue": true
+	},
+	{
 		"property": "zen.mods.TabPreviewEnhanced.enabledBackgroundNative",
 		"label": "Enable native background on tab previews.",
 		"type": "checkbox",
